@@ -1,0 +1,1297 @@
+{
+  "Resources": {
+    "dil1apppipelinecontainer9237AB42": {
+      "Type": "AWS::ECR::Repository",
+      "Properties": {
+        "RepositoryName": "dil1-app-pipeline"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container/Resource"
+      }
+    },
+    "dil1apppipelinecontainergitBA0627EB": {
+      "Type": "AWS::CodeCommit::Repository",
+      "Properties": {
+        "RepositoryName": "dil1-app-pipeline",
+        "RepositoryDescription": "Application code"
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container-git/Resource"
+      }
+    },
+    "dil1apppipelinecontainergitdiltry1apppipelinedil1apppipelinecontainerpipelineEBAF9B28EventRule1785D91C": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "EventPattern": {
+          "source": [
+            "aws.codecommit"
+          ],
+          "resources": [
+            {
+              "Fn::GetAtt": [
+                "dil1apppipelinecontainergitBA0627EB",
+                "Arn"
+              ]
+            }
+          ],
+          "detail-type": [
+            "CodeCommit Repository State Change"
+          ],
+          "detail": {
+            "event": [
+              "referenceCreated",
+              "referenceUpdated"
+            ],
+            "referenceName": [
+              "master"
+            ]
+          }
+        },
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:",
+                  {
+                    "Ref": "AWS::Partition"
+                  },
+                  ":codepipeline:",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ":",
+                  {
+                    "Ref": "AWS::AccountId"
+                  },
+                  ":",
+                  {
+                    "Ref": "dil1apppipelinecontainerpipelineE57ECBB6"
+                  }
+                ]
+              ]
+            },
+            "Id": "Target0",
+            "RoleArn": {
+              "Fn::GetAtt": [
+                "dil1apppipelinecontainerpipelineEventsRole6D1703C0",
+                "Arn"
+              ]
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container-git/diltry1apppipelinedil1apppipelinecontainerpipelineEBAF9B28EventRule/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9": {
+      "Type": "AWS::KMS::Key",
+      "Properties": {
+        "KeyPolicy": {
+          "Statement": [
+            {
+              "Action": [
+                "kms:Create*",
+                "kms:Describe*",
+                "kms:Enable*",
+                "kms:List*",
+                "kms:Put*",
+                "kms:Update*",
+                "kms:Revoke*",
+                "kms:Disable*",
+                "kms:Get*",
+                "kms:Delete*",
+                "kms:ScheduleKeyDeletion",
+                "kms:CancelKeyDeletion",
+                "kms:GenerateDataKey",
+                "kms:TagResource",
+                "kms:UntagResource"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "dil1apppipelinecontainerpipelineRoleE8AB6C40",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleA631B723",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "DockerBuildARM64RoleCBA9F14D",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "DockerBuildARM64RoleCBA9F14D",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/ArtifactsBucketEncryptionKey/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKeyAlias6B3B1C81": {
+      "Type": "AWS::KMS::Alias",
+      "Properties": {
+        "AliasName": "alias/codepipeline-diltry1apppipelinedil1apppipelinecontainerpipelineebaf9b28",
+        "TargetKeyId": {
+          "Fn::GetAtt": [
+            "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+            "Arn"
+          ]
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/ArtifactsBucketEncryptionKeyAlias/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "KMSMasterKeyID": {
+                  "Fn::GetAtt": [
+                    "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+                    "Arn"
+                  ]
+                },
+                "SSEAlgorithm": "aws:kms"
+              }
+            }
+          ]
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/ArtifactsBucket/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineRoleE8AB6C40": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "codepipeline.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/Role/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineRoleDefaultPolicy1F48BFFF": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleA631B723",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainerpipelineDockerBuildDockerBuildARM64CodePipelineActionRole997D3132",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "dil1apppipelinecontainerpipelineRoleDefaultPolicy1F48BFFF",
+        "Roles": [
+          {
+            "Ref": "dil1apppipelinecontainerpipelineRoleE8AB6C40"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/Role/DefaultPolicy/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineE57ECBB6": {
+      "Type": "AWS::CodePipeline::Pipeline",
+      "Properties": {
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "dil1apppipelinecontainerpipelineRoleE8AB6C40",
+            "Arn"
+          ]
+        },
+        "Stages": [
+          {
+            "Actions": [
+              {
+                "ActionTypeId": {
+                  "Category": "Source",
+                  "Owner": "AWS",
+                  "Provider": "CodeCommit",
+                  "Version": "1"
+                },
+                "Configuration": {
+                  "RepositoryName": {
+                    "Fn::GetAtt": [
+                      "dil1apppipelinecontainergitBA0627EB",
+                      "Name"
+                    ]
+                  },
+                  "BranchName": "master",
+                  "PollForSourceChanges": false
+                },
+                "Name": "CodeCommit_Source",
+                "OutputArtifacts": [
+                  {
+                    "Name": "Artifact_Source_CodeCommit_Source"
+                  }
+                ],
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleA631B723",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 1
+              }
+            ],
+            "Name": "Source"
+          },
+          {
+            "Actions": [
+              {
+                "ActionTypeId": {
+                  "Category": "Build",
+                  "Owner": "AWS",
+                  "Provider": "CodeBuild",
+                  "Version": "1"
+                },
+                "Configuration": {
+                  "ProjectName": {
+                    "Ref": "DockerBuildARM64C09B502F"
+                  }
+                },
+                "InputArtifacts": [
+                  {
+                    "Name": "Artifact_Source_CodeCommit_Source"
+                  }
+                ],
+                "Name": "DockerBuild_ARM64",
+                "OutputArtifacts": [
+                  {
+                    "Name": "ARM64_BuildOutput"
+                  }
+                ],
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "dil1apppipelinecontainerpipelineDockerBuildDockerBuildARM64CodePipelineActionRole997D3132",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 1
+              }
+            ],
+            "Name": "DockerBuild"
+          }
+        ],
+        "ArtifactStore": {
+          "EncryptionKey": {
+            "Id": {
+              "Fn::GetAtt": [
+                "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+                "Arn"
+              ]
+            },
+            "Type": "KMS"
+          },
+          "Location": {
+            "Ref": "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5"
+          },
+          "Type": "S3"
+        },
+        "Name": "dil1-app-pipeline"
+      },
+      "DependsOn": [
+        "dil1apppipelinecontainerpipelineRoleDefaultPolicy1F48BFFF",
+        "dil1apppipelinecontainerpipelineRoleE8AB6C40"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleA631B723": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/Source/CodeCommit_Source/CodePipelineActionRole/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleDefaultPolicy9C6BBFC0": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "codecommit:GetBranch",
+                "codecommit:GetCommit",
+                "codecommit:UploadArchive",
+                "codecommit:GetUploadArchiveStatus",
+                "codecommit:CancelUploadArchive"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainergitBA0627EB",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleDefaultPolicy9C6BBFC0",
+        "Roles": [
+          {
+            "Ref": "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleA631B723"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/Source/CodeCommit_Source/CodePipelineActionRole/DefaultPolicy/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineEventsRole6D1703C0": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/EventsRole/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineEventsRoleDefaultPolicyFF960C00": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "codepipeline:StartPipelineExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codepipeline:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":",
+                    {
+                      "Ref": "dil1apppipelinecontainerpipelineE57ECBB6"
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "dil1apppipelinecontainerpipelineEventsRoleDefaultPolicyFF960C00",
+        "Roles": [
+          {
+            "Ref": "dil1apppipelinecontainerpipelineEventsRole6D1703C0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/EventsRole/DefaultPolicy/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineDockerBuildDockerBuildARM64CodePipelineActionRole997D3132": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/DockerBuild/DockerBuild_ARM64/CodePipelineActionRole/Resource"
+      }
+    },
+    "dil1apppipelinecontainerpipelineDockerBuildDockerBuildARM64CodePipelineActionRoleDefaultPolicy1CC4F7C3": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "codebuild:BatchGetBuilds",
+                "codebuild:StartBuild",
+                "codebuild:StopBuild"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "DockerBuildARM64C09B502F",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "dil1apppipelinecontainerpipelineDockerBuildDockerBuildARM64CodePipelineActionRoleDefaultPolicy1CC4F7C3",
+        "Roles": [
+          {
+            "Ref": "dil1apppipelinecontainerpipelineDockerBuildDockerBuildARM64CodePipelineActionRole997D3132"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/dil1-app-pipeline-container--pipeline/DockerBuild/DockerBuild_ARM64/CodePipelineActionRole/DefaultPolicy/Resource"
+      }
+    },
+    "DockerBuildARM64RoleCBA9F14D": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "codebuild.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/DockerBuild_ARM64/Role/Resource"
+      }
+    },
+    "DockerBuildARM64RoleDefaultPolicyAF61ED30": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":logs:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":log-group:/aws/codebuild/",
+                      {
+                        "Ref": "DockerBuildARM64C09B502F"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":logs:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":log-group:/aws/codebuild/",
+                      {
+                        "Ref": "DockerBuildARM64C09B502F"
+                      },
+                      ":*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "codebuild:CreateReportGroup",
+                "codebuild:CreateReport",
+                "codebuild:UpdateReport",
+                "codebuild:BatchPutTestCases",
+                "codebuild:BatchPutCodeCoverages"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codebuild:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":report-group/",
+                    {
+                      "Ref": "DockerBuildARM64C09B502F"
+                    },
+                    "-*"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainer9237AB42",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "ecr:PutImage",
+                "ecr:InitiateLayerUpload",
+                "ecr:UploadLayerPart",
+                "ecr:CompleteLayerUpload"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainer9237AB42",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":ecr:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":repository/*"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "DockerBuildARM64RoleDefaultPolicyAF61ED30",
+        "Roles": [
+          {
+            "Ref": "DockerBuildARM64RoleCBA9F14D"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/DockerBuild_ARM64/Role/DefaultPolicy/Resource"
+      }
+    },
+    "DockerBuildARM64C09B502F": {
+      "Type": "AWS::CodeBuild::Project",
+      "Properties": {
+        "Artifacts": {
+          "Type": "CODEPIPELINE"
+        },
+        "Environment": {
+          "ComputeType": "BUILD_GENERAL1_LARGE",
+          "EnvironmentVariables": [
+            {
+              "Name": "REPO_ECR",
+              "Type": "PLAINTEXT",
+              "Value": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::Select": [
+                        4,
+                        {
+                          "Fn::Split": [
+                            ":",
+                            {
+                              "Fn::GetAtt": [
+                                "dil1apppipelinecontainer9237AB42",
+                                "Arn"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    ".dkr.ecr.",
+                    {
+                      "Fn::Select": [
+                        3,
+                        {
+                          "Fn::Split": [
+                            ":",
+                            {
+                              "Fn::GetAtt": [
+                                "dil1apppipelinecontainer9237AB42",
+                                "Arn"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    ".",
+                    {
+                      "Ref": "AWS::URLSuffix"
+                    },
+                    "/",
+                    {
+                      "Ref": "dil1apppipelinecontainer9237AB42"
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "Image": "aws/codebuild/amazonlinux2-aarch64-standard:1.0",
+          "ImagePullCredentialsType": "CODEBUILD",
+          "PrivilegedMode": true,
+          "Type": "ARM_CONTAINER"
+        },
+        "ServiceRole": {
+          "Fn::GetAtt": [
+            "DockerBuildARM64RoleCBA9F14D",
+            "Arn"
+          ]
+        },
+        "Source": {
+          "BuildSpec": "buildspec.yml",
+          "Type": "CODEPIPELINE"
+        },
+        "EncryptionKey": {
+          "Fn::GetAtt": [
+            "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/DockerBuild_ARM64/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAA32QzU7DMBCEn6V316WqEOoN6LEHovAEYbOIbWJvZK9bVZbfHf+k4sZpvpVnZ2zv9fGonzavw81vYZx2Edihjp8ywKRObL24AKJO3/YjyBIq9eg5OMDC2TKSENukSkREcDr2uLAnYXdv9seUFPCIwMaQ/OfCK1rx2RHmWlK07S604Ew237BbqZw/OKnJ5LUz1sQibzMNvgwVkvIHHd8DTFgf0igpGkwu47WsaMczQU1p1Nq/As3jX3Xn+ILtc1ZMKanuLj9sdwf9ovfPm4sn2rpghQzqvukvjDhdR3QBAAA="
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipeline/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Outputs": {
+    "applicationrepository": {
+      "Value": {
+        "Fn::GetAtt": [
+          "dil1apppipelinecontainergitBA0627EB",
+          "CloneUrlHttp"
+        ]
+      }
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "af-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

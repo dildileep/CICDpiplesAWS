@@ -1,0 +1,2164 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "app-base": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "app-base.template.json"
+      },
+      "metadata": {
+        "/app-base/BaseVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCD45965B8",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:355:25)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet1Subnet3A607EE2",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet1RouteTableDD9C5642",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet1RouteTableAssociation52241D26",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet1DefaultRoute027C883F",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet1EIP87086307",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:864:27)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/nat.js:74:33)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet1NATGateway23160C86",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:862:21)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/nat.js:74:33)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet2Subnet1115E1D2",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet2RouteTableF97FEF81",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet2RouteTableAssociationC59A8337",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet2DefaultRoute8E53C638",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet2EIP9D3F1B06",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:864:27)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/nat.js:74:33)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPublicSubnet2NATGateway6616AE08",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:862:21)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/nat.js:74:33)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPrivateSubnet1SubnetF99B1DA5",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPrivateSubnet1RouteTable5B5DA874",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPrivateSubnet1RouteTableAssociation410EBFCB",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPrivateSubnet1DefaultRoute931CABB9",
+            "trace": [
+              "PrivateSubnet.addRoute (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:782:23)",
+              "NatGatewayProvider.configureSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/nat.js:85:16)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/nat.js:79:18)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPrivateSubnet2Subnet88334406",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPrivateSubnet2RouteTable7E52A55E",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPrivateSubnet2RouteTableAssociation7F742394",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCPrivateSubnet2DefaultRoute8E8DFB45",
+            "trace": [
+              "PrivateSubnet.addRoute (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:782:23)",
+              "NatGatewayProvider.configureSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/nat.js:85:16)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/nat.js:79:18)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCIGWDCBB6967",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:380:25)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/BaseVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BaseVPCVPCGWB245CE93",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:383:25)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-base/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ]
+      }
+    },
+    "app-pipeline": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "app-pipeline.template.json"
+      },
+      "metadata": {
+        "/app-pipeline/dil1-app-pipeline-container/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainer9237AB42",
+            "trace": [
+              "new Repository (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ecr/lib/repository.js:203:26)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container-git/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainergitBA0627EB",
+            "trace": [
+              "new Repository (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:174:28)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container-git/apppipelinedil1apppipelinecontainerpipelineD6F113A4EventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainergitapppipelinedil1apppipelinecontainerpipelineD6F113A4EventRuleAC53453B",
+            "trace": [
+              "new Rule (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:33:26)",
+              "Repository.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:29:22)",
+              "Repository.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Repository.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Repository.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKey35DC63B9",
+            "trace": [
+              "new Key (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-kms/lib/key.js:225:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:95:33)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineArtifactsBucketEncryptionKeyAlias6B3B1C81",
+            "trace": [
+              "new Alias (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-kms/lib/alias.js:118:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:101:17)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineArtifactsBucket7DCF92C5",
+            "trace": [
+              "new Bucket (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:521:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:107:27)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineRoleE8AB6C40",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:117:35)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineRoleDefaultPolicy1F48BFFF",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:380:31)",
+              "Bucket.grantReadWrite (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:320:21)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:130:29)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineE57ECBB6",
+            "trace": [
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:120:30)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/Source/CodeCommit_Source/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleA631B723",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:400:26)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:246:33)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/Source/CodeCommit_Source/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineSourceCodeCommitSourceCodePipelineActionRoleDefaultPolicy9C6BBFC0",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:380:31)",
+              "Bucket.grantReadWrite (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:320:21)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:90:24)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineEventsRole6D1703C0",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Object.singletonEventRole (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/util.js:39:18)",
+              "CodePipeline.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/codepipeline.js:33:52)",
+              "Rule.addTarget (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:86:36)",
+              "Repository.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:34:14)",
+              "Repository.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Repository.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Repository.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineEventsRoleDefaultPolicyFF960C00",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "Array.forEach (<anonymous>)",
+              "Object.singletonEventRole (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/util.js:42:22)",
+              "CodePipeline.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/codepipeline.js:33:52)",
+              "Rule.addTarget (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:86:36)",
+              "Repository.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:34:14)",
+              "Repository.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Repository.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Repository.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/DockerBuild/DockerBuild_ARM64/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineDockerBuildDockerBuildARM64CodePipelineActionRole997D3132",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:400:26)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:246:33)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/dil1-app-pipeline-container--pipeline/DockerBuild/DockerBuild_ARM64/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dil1apppipelinecontainerpipelineDockerBuildDockerBuildARM64CodePipelineActionRoleDefaultPolicy1CC4F7C3",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "CodeBuildAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codebuild/build-action.js:80:22)",
+              "CodeBuildAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/DockerBuild_ARM64/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DockerBuildARM64RoleCBA9F14D",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Project (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codebuild/lib/project.js:262:35)",
+              "new PipelineProject (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/DockerBuild_ARM64/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DockerBuildARM64RoleDefaultPolicyAF61ED30",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "PipelineProject.addToRolePolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codebuild/lib/project.js:58:23)",
+              "new Project (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codebuild/lib/project.js:346:14)",
+              "new PipelineProject (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/DockerBuild_ARM64/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DockerBuildARM64C09B502F",
+            "trace": [
+              "new Project (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codebuild/lib/project.js:304:26)",
+              "new PipelineProject (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codebuild/lib/pipeline-project.js:19:9)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/application_repository": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationrepository",
+            "trace": [
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipeline/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ]
+      }
+    },
+    "app-deploypipeline": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "app-deploypipeline.template.json"
+      },
+      "metadata": {
+        "/app-deploypipeline/Codedeploy-to-ec2-container-git/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containergit6A4A5AC3",
+            "trace": [
+              "new Repository (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:174:28)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container-git/appdeploypipelineCodedeploytoec2containerpipelineF627F771EventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containergitappdeploypipelineCodedeploytoec2containerpipelineF627F771EventRule85E9DD1F",
+            "trace": [
+              "new Rule (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:33:26)",
+              "Repository.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:29:22)",
+              "Repository.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Repository.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Repository.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineArtifactsBucketEncryptionKey1D6738E0",
+            "trace": [
+              "new Key (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-kms/lib/key.js:225:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:95:33)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineArtifactsBucketEncryptionKeyAlias5E8F62A5",
+            "trace": [
+              "new Alias (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-kms/lib/alias.js:118:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:101:17)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineArtifactsBucket84341DAD",
+            "trace": [
+              "new Bucket (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:521:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:107:27)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineRole2EBBC5B5",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:117:35)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineRoleDefaultPolicy517904F0",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:380:31)",
+              "Bucket.grantReadWrite (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:320:21)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:130:29)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipeline1EF7091A",
+            "trace": [
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:120:30)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Source/CodeCommit_Source/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineSourceCodeCommitSourceCodePipelineActionRole389A6B97",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:400:26)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:246:33)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Source/CodeCommit_Source/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineSourceCodeCommitSourceCodePipelineActionRoleDefaultPolicy82B03095",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:380:31)",
+              "Bucket.grantReadWrite (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:320:21)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:90:24)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineEventsRole7595D4B7",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Object.singletonEventRole (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/util.js:39:18)",
+              "CodePipeline.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/codepipeline.js:33:52)",
+              "Rule.addTarget (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:86:36)",
+              "Repository.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:34:14)",
+              "Repository.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Repository.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Repository.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineEventsRoleDefaultPolicy1C32951E",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "Array.forEach (<anonymous>)",
+              "Object.singletonEventRole (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/util.js:42:22)",
+              "CodePipeline.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/codepipeline.js:33:52)",
+              "Rule.addTarget (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:86:36)",
+              "Repository.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:34:14)",
+              "Repository.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Repository.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Repository.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Deploy-ec2/Codedeploy-to-ec2-cloudformation/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineDeployec2Codedeploytoec2cloudformationCodePipelineActionRole5252AB34",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:400:26)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:246:33)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Deploy-ec2/Codedeploy-to-ec2-cloudformation/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineDeployec2Codedeploytoec2cloudformationCodePipelineActionRoleDefaultPolicy73AC8108",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "SingletonPolicy.statementFor (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:392:23)",
+              "SingletonPolicy.grantPassRole (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:383:14)",
+              "CloudFormationCreateUpdateStackAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:144:47)",
+              "CloudFormationCreateUpdateStackAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:259:36)",
+              "CloudFormationCreateUpdateStackAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Deploy-ec2/Codedeploy-to-ec2-cloudformation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineDeployec2Codedeploytoec2cloudformationRole1F730D35",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "CloudFormationCreateUpdateStackAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:127:40)",
+              "CloudFormationCreateUpdateStackAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:259:36)",
+              "CloudFormationCreateUpdateStackAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Deploy-ec2/Codedeploy-to-ec2-cloudformation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineDeployec2Codedeploytoec2cloudformationRoleDefaultPolicy37C64D00",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:380:31)",
+              "Bucket.grantRead (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:244:21)",
+              "CloudFormationCreateUpdateStackAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:136:28)",
+              "CloudFormationCreateUpdateStackAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/cloudformation/pipeline-actions.js:259:36)",
+              "CloudFormationCreateUpdateStackAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "new Stage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:26:18)",
+              "Pipeline.addStage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:179:23)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Deploy-code/Deploy/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineDeploycodeDeployCodePipelineActionRole76C6E3D0",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:400:26)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:246:33)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/Codedeploy-to-ec2-container--pipeline/Deploy-code/Deploy/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Codedeploytoec2containerpipelineDeploycodeDeployCodePipelineActionRoleDefaultPolicyF7259891",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "CodeDeployServerDeployAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codedeploy/server-deploy-action.js:38:22)",
+              "CodeDeployServerDeployAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/application_repository": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationrepository",
+            "trace": [
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-deploypipeline/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ]
+      }
+    },
+    "app-pipelinedeploy-ec2": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "app-pipelinedeploy-ec2.template.json",
+        "tags": {
+          "Name": "code-deploy-pipeline-ec2"
+        }
+      },
+      "metadata": {
+        "/app-pipelinedeploy-ec2": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "The API @aws-cdk/core.Tag.add(scope,k,v) is deprecated: Use \"Tags.of(scope).add(k,v)\" instead. This API will be removed in the next major release",
+            "trace": [
+              "Annotations.addMessage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/annotations.js:94:42)",
+              "Annotations.addWarning (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/annotations.js:37:14)",
+              "Annotations.addDeprecation (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/annotations.js:85:14)",
+              "Function.add (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/tag-aspect.js:52:45)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7317:85",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.sinvoke (/tmp/tmppx4_cl9u/lib/program.js:7317:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "Name",
+                "Value": "code-deploy-pipeline-ec2"
+              }
+            ],
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/construct-compat.js:405:62)",
+              "Object.addStackArtifactToAssembly (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stack-synthesizers/_shared.js:22:20)",
+              "LegacyStackSynthesizer.emitStackArtifact (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stack-synthesizers/stack-synthesizer.js:36:19)",
+              "LegacyStackSynthesizer.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:124:14)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:143:35",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "synthesizeTree (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:137:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:33:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCB9E5F0B4",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:355:25)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet1Subnet325F50B2",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet1RouteTableF591E248",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet1RouteTableAssociationBFFA43B7",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet1DefaultRoute19059ECD",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet2Subnet2B2DFF71",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet2RouteTable55DAB1BB",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet2RouteTableAssociation0849466B",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:557:18)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet2DefaultRoute9ED4D6BC",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCIGWB7E252D3",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:380:25)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/VPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCVPCGW99B986DC",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:383:25)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/CodeCommitRepository/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CodeCommitRepository596379BC",
+            "trace": [
+              "new Repository (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:174:28)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/sec-group/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "secgroup81B6576A",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:213:30)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Role1ABCC5F0",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/ec2-instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2instanceInstanceProfile9BCE9015",
+            "trace": [
+              "new Instance (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/instance.js:50:28)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/ec2-instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2instance42082E81",
+            "trace": [
+              "new Instance (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/instance.js:85:25)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:134:15)",
+              "Function.valueForTypedStringParameter (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:208:21)",
+              "AmazonLinuxImage.getImage (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/machine-image.js:127:41)",
+              "new Instance (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-ec2/lib/instance.js:54:48)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/MyDemoApplication/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyDemoApplication5006C92A",
+            "trace": [
+              "new ServerApplication (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codedeploy/lib/server/application.js:23:26)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/CodeDeployRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CodeDeployRole12BEECBE",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/CodeDeployDeploymentGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CodeDeployDeploymentGroupA33AC6C7",
+            "trace": [
+              "new ServerDeploymentGroup (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codedeploy/lib/server/deployment-group.js:100:26)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineArtifactsBucketEncryptionKey94FB115B",
+            "trace": [
+              "new Key (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-kms/lib/key.js:225:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:95:33)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineArtifactsBucketEncryptionKeyAlias675EFBDA",
+            "trace": [
+              "new Alias (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-kms/lib/alias.js:118:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:101:17)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineArtifactsBucket1C1D71D8",
+            "trace": [
+              "new Bucket (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:521:26)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:107:27)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineRoleA50B8070",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:117:35)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineRoleDefaultPolicyAE05F61E",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:380:31)",
+              "Bucket.grantReadWrite (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:320:21)",
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:130:29)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineD731FBB7",
+            "trace": [
+              "new Pipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:120:30)",
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/Source/Source/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineSourceCodePipelineActionRole7E407CA1",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:400:26)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:246:33)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/Source/Source/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineSourceCodePipelineActionRoleDefaultPolicy5C8887AC",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:380:31)",
+              "Bucket.grantReadWrite (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-s3/lib/bucket.js:320:21)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:90:24)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/Deploy-to-ec2/Deploy/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineDeploytoec2DeployCodePipelineActionRole85CD47FF",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Pipeline.getRoleForAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:400:26)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:246:33)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/Deploy-to-ec2/Deploy/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineDeploytoec2DeployCodePipelineActionRoleDefaultPolicyB436FCB0",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "CodeDeployServerDeployAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codedeploy/server-deploy-action.js:38:22)",
+              "CodeDeployServerDeployAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineEventsRole0746F293",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "Object.singletonEventRole (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/util.js:39:18)",
+              "CodePipeline.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/codepipeline.js:33:52)",
+              "Rule.addTarget (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:86:36)",
+              "Import.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:34:14)",
+              "Import.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Import.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Import.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code-deploy-pipeline/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "codedeploypipelineEventsRoleDefaultPolicy3E3F5CD6",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:205:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-iam/lib/role.js:217:21)",
+              "Array.forEach (<anonymous>)",
+              "Object.singletonEventRole (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/util.js:42:22)",
+              "CodePipeline.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events-targets/lib/codepipeline.js:33:52)",
+              "Rule.addTarget (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:86:36)",
+              "Import.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:34:14)",
+              "Import.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Import.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Import.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/code_repo/apppipelinedeployec2codedeploypipelineC5B0C428EventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coderepoapppipelinedeployec2codedeploypipelineC5B0C428EventRule740CB7EA",
+            "trace": [
+              "new Rule (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-events/lib/rule.js:33:26)",
+              "Import.onEvent (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:29:22)",
+              "Import.onStateChange (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:43:27)",
+              "Import.onReferenceUpdated (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:65:27)",
+              "Import.onCommit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codecommit/lib/repository.js:115:27)",
+              "CodeCommitSourceAction.bound (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/codecommit/source-action.js:81:35)",
+              "CodeCommitSourceAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline-actions/lib/action.js:59:21)",
+              "RichAction.bind (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/rich-action.js:25:28)",
+              "Pipeline._attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/pipeline.js:250:41)",
+              "Stage.attachActionToPipeline (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:110:31)",
+              "Stage.addAction (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/aws-codepipeline/lib/private/stage.js:69:33)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/application_repository": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationrepository",
+            "trace": [
+              "Kernel._create (/tmp/tmppx4_cl9u/lib/program.js:7485:29)",
+              "Kernel.create (/tmp/tmppx4_cl9u/lib/program.js:7220:29)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/app-pipelinedeploy-ec2/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:9",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:184:9)",
+              "visit (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:117:5)",
+              "Object.synthesize (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-PlsZy4/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmppx4_cl9u/lib/program.js:7296:105",
+              "Kernel._ensureSync (/tmp/tmppx4_cl9u/lib/program.js:7879:28)",
+              "Kernel.invoke (/tmp/tmppx4_cl9u/lib/program.js:7296:34)",
+              "KernelHost.processRequest (/tmp/tmppx4_cl9u/lib/program.js:10473:36)",
+              "KernelHost.run (/tmp/tmppx4_cl9u/lib/program.js:10433:22)",
+              "Immediate._onImmediate (/tmp/tmppx4_cl9u/lib/program.js:10434:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

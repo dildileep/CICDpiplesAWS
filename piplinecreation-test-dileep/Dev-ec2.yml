@@ -1,0 +1,105 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS Envionmental for deployment group and ec2 instance with agents
+Parameters:
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instances
+    Type: AWS::EC2::KeyPair::KeyName
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+    Default: key_dil
+  SSHLocation:
+    Description: The IP address range that can be used to SSH to the EC2 instances
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 0.0.0.0/0 
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
+    ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+  AMIID:
+    Type: String
+    Default: ami-019774e5caffd1685
+
+Resources:
+  WebappApplication:
+    Type: AWS::CodeDeploy::Application
+    Properties:
+      ApplicationName: codedeploy-Ec2
+      ComputePlatform: Server
+      Tags:
+        - Key: Name
+          Value: DockerHost
+  WebappDeploymentGroup:
+    Type: AWS::CodeDeploy::DeploymentGroup
+    Properties:
+      ApplicationName: !Ref WebappApplication
+      ServiceRoleArn: !GetAtt CodeDeployRole.Arn
+      DeploymentConfigName: CodeDeployDefault.AllAtOnce
+      Ec2TagSet:
+        Ec2TagSetList:
+          - Ec2TagGroup:
+              - Type: KEY_AND_VALUE
+                Key: "Name"
+                Value: "DockerHost"
+  DockerHostPublicIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      InstanceId: !Ref DockerHost
+      Tags:
+        - Key: "Name"
+          Value: "DockerHostPublicIP"
+  DockerHostSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: >-
+        Enable SSH access via port tcp/22
+        access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: !Ref SSHLocation
+  DockerHost:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId:
+        Ref: AMIID
+      InstanceType: t4g.micro
+      SecurityGroups:
+        - !Ref DockerHostSecurityGroup
+      KeyName:
+        Ref: KeyName
+      Tags:
+        - Key: Name
+          Value: DockerHost
+  CodeDeployRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          -
+            Effect: "Allow"
+            Principal:
+              Service:
+                - "codedeploy.amazonaws.com"
+            Action:
+              - "sts:AssumeRole"
+      Policies:
+        -
+          PolicyName: allow-autoscaling
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              -
+                Effect: Allow
+                Action:
+                  - ec2:*
+                  - autoscaling:*
+                Resource: "*"
+Outputs:
+  DockerHostPublicIP:
+    Value: DockerHostPublicIP
+    Description: DockerHost Public IP Address
+  WebappDeploymentGroup:
+    Value: !Ref WebappDeploymentGroup
+    Description: deployment group name

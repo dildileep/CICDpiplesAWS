@@ -1,0 +1,1609 @@
+{
+  "Resources": {
+    "VPCB9E5F0B4": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "diltry1-app-pipelinedeploy-ec2/VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/Resource"
+      }
+    },
+    "VPCpublicSubnet1Subnet325F50B2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/17",
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet1/Subnet"
+      }
+    },
+    "VPCpublicSubnet1RouteTableF591E248": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet1/RouteTable"
+      }
+    },
+    "VPCpublicSubnet1RouteTableAssociationBFFA43B7": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VPCpublicSubnet1RouteTableF591E248"
+        },
+        "SubnetId": {
+          "Ref": "VPCpublicSubnet1Subnet325F50B2"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet1/RouteTableAssociation"
+      }
+    },
+    "VPCpublicSubnet1DefaultRoute19059ECD": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VPCpublicSubnet1RouteTableF591E248"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "VPCIGWB7E252D3"
+        }
+      },
+      "DependsOn": [
+        "VPCVPCGW99B986DC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet1/DefaultRoute"
+      }
+    },
+    "VPCpublicSubnet2Subnet2B2DFF71": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.128.0/17",
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet2/Subnet"
+      }
+    },
+    "VPCpublicSubnet2RouteTable55DAB1BB": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet2/RouteTable"
+      }
+    },
+    "VPCpublicSubnet2RouteTableAssociation0849466B": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VPCpublicSubnet2RouteTable55DAB1BB"
+        },
+        "SubnetId": {
+          "Ref": "VPCpublicSubnet2Subnet2B2DFF71"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet2/RouteTableAssociation"
+      }
+    },
+    "VPCpublicSubnet2DefaultRoute9ED4D6BC": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VPCpublicSubnet2RouteTable55DAB1BB"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "VPCIGWB7E252D3"
+        }
+      },
+      "DependsOn": [
+        "VPCVPCGW99B986DC"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/publicSubnet2/DefaultRoute"
+      }
+    },
+    "VPCIGWB7E252D3": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "diltry1-app-pipelinedeploy-ec2/VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/IGW"
+      }
+    },
+    "VPCVPCGW99B986DC": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        },
+        "InternetGatewayId": {
+          "Ref": "VPCIGWB7E252D3"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/VPC/VPCGW"
+      }
+    },
+    "CodeCommitRepository596379BC": {
+      "Type": "AWS::CodeCommit::Repository",
+      "Properties": {
+        "RepositoryName": "code-deploy-pipelineMyDemoRepo",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/CodeCommitRepository/Resource"
+      }
+    },
+    "secgroup81B6576A": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "diltry1-app-pipelinedeploy-ec2/sec-group",
+        "GroupName": "code-deploy-pipeline-sg",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow SSH connection",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow HTTP connection",
+            "FromPort": 80,
+            "IpProtocol": "tcp",
+            "ToPort": 80
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ],
+        "VpcId": {
+          "Ref": "VPCB9E5F0B4"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/sec-group/Resource"
+      }
+    },
+    "Role1ABCC5F0": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "ec2.",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/AmazonEC2FullAccess"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/Role/Resource"
+      }
+    },
+    "ec2instanceInstanceProfile9BCE9015": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "Role1ABCC5F0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/ec2-instance/InstanceProfile"
+      }
+    },
+    "ec2instance42082E81": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "IamInstanceProfile": {
+          "Ref": "ec2instanceInstanceProfile9BCE9015"
+        },
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t2.micro",
+        "KeyName": "key_dil",
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "secgroup81B6576A",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Ref": "VPCpublicSubnet1Subnet325F50B2"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash\nsudo yum -y update; sudo yum install -y ruby aws-cli wget ;         cd /home/ec2-user; wget https://aws-codedeploy-ap-south-1.s3.amazonaws.com/latest/install ;         sudo chmod +x ./install; sudo ./install auto ; sudo service codedeploy-agent status"
+        }
+      },
+      "DependsOn": [
+        "Role1ABCC5F0"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/ec2-instance/Resource"
+      }
+    },
+    "MyDemoApplication5006C92A": {
+      "Type": "AWS::CodeDeploy::Application",
+      "Properties": {
+        "ApplicationName": "code-deploy-pipeline-serverapp",
+        "ComputePlatform": "Server"
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/MyDemoApplication/Resource"
+      }
+    },
+    "CodeDeployRole12BEECBE": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "codedeploy.",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ".",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole"
+        ],
+        "RoleName": "CodeDeployRole",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/CodeDeployRole/Resource"
+      }
+    },
+    "CodeDeployDeploymentGroupRole81435E9E": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "codedeploy.",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ".",
+                      {
+                        "Ref": "AWS::URLSuffix"
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSCodeDeployRole"
+              ]
+            ]
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/CodeDeployDeploymentGroup/Role/Resource"
+      }
+    },
+    "CodeDeployDeploymentGroupA33AC6C7": {
+      "Type": "AWS::CodeDeploy::DeploymentGroup",
+      "Properties": {
+        "ApplicationName": {
+          "Ref": "MyDemoApplication5006C92A"
+        },
+        "ServiceRoleArn": {
+          "Fn::GetAtt": [
+            "CodeDeployDeploymentGroupRole81435E9E",
+            "Arn"
+          ]
+        },
+        "AutoRollbackConfiguration": {
+          "Enabled": true,
+          "Events": [
+            "DEPLOYMENT_FAILURE"
+          ]
+        },
+        "DeploymentGroupName": "MyDeploymentGroup",
+        "Ec2TagSet": {
+          "Ec2TagSetList": [
+            {
+              "Ec2TagGroup": [
+                {
+                  "Key": "Name",
+                  "Type": "KEY_AND_VALUE",
+                  "Value": "code-deploy-pipeline-ec2"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/CodeDeployDeploymentGroup/Resource"
+      }
+    },
+    "codedeploypipelineArtifactsBucketEncryptionKey94FB115B": {
+      "Type": "AWS::KMS::Key",
+      "Properties": {
+        "KeyPolicy": {
+          "Statement": [
+            {
+              "Action": [
+                "kms:Create*",
+                "kms:Describe*",
+                "kms:Enable*",
+                "kms:List*",
+                "kms:Put*",
+                "kms:Update*",
+                "kms:Revoke*",
+                "kms:Disable*",
+                "kms:Get*",
+                "kms:Delete*",
+                "kms:ScheduleKeyDeletion",
+                "kms:CancelKeyDeletion",
+                "kms:GenerateDataKey",
+                "kms:TagResource",
+                "kms:UntagResource"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineRoleA50B8070",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineSourceCodePipelineActionRole7E407CA1",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineDeployCodePipelineActionRoleA5F88CC6",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/ArtifactsBucketEncryptionKey/Resource"
+      }
+    },
+    "codedeploypipelineArtifactsBucketEncryptionKeyAlias675EFBDA": {
+      "Type": "AWS::KMS::Alias",
+      "Properties": {
+        "AliasName": "alias/codepipeline-diltry1apppipelinedeployec2codedeploypipeline837af954",
+        "TargetKeyId": {
+          "Fn::GetAtt": [
+            "codedeploypipelineArtifactsBucketEncryptionKey94FB115B",
+            "Arn"
+          ]
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/ArtifactsBucketEncryptionKeyAlias/Resource"
+      }
+    },
+    "codedeploypipelineArtifactsBucket1C1D71D8": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "KMSMasterKeyID": {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineArtifactsBucketEncryptionKey94FB115B",
+                    "Arn"
+                  ]
+                },
+                "SSEAlgorithm": "aws:kms"
+              }
+            }
+          ]
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/ArtifactsBucket/Resource"
+      }
+    },
+    "codedeploypipelineRoleA50B8070": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "codepipeline.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/Role/Resource"
+      }
+    },
+    "codedeploypipelineRoleDefaultPolicyAE05F61E": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineArtifactsBucket1C1D71D8",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "codedeploypipelineArtifactsBucket1C1D71D8",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "codedeploypipelineArtifactsBucketEncryptionKey94FB115B",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "codedeploypipelineSourceCodePipelineActionRole7E407CA1",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "codedeploypipelineDeployCodePipelineActionRoleA5F88CC6",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "codedeploypipelineRoleDefaultPolicyAE05F61E",
+        "Roles": [
+          {
+            "Ref": "codedeploypipelineRoleA50B8070"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/Role/DefaultPolicy/Resource"
+      }
+    },
+    "codedeploypipelineD731FBB7": {
+      "Type": "AWS::CodePipeline::Pipeline",
+      "Properties": {
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "codedeploypipelineRoleA50B8070",
+            "Arn"
+          ]
+        },
+        "Stages": [
+          {
+            "Actions": [
+              {
+                "ActionTypeId": {
+                  "Category": "Source",
+                  "Owner": "AWS",
+                  "Provider": "CodeCommit",
+                  "Version": "1"
+                },
+                "Configuration": {
+                  "RepositoryName": "code-deploy-pipelineMyDemoRepo",
+                  "BranchName": "master",
+                  "PollForSourceChanges": false
+                },
+                "Name": "Source",
+                "OutputArtifacts": [
+                  {
+                    "Name": "Artifact_Source_Source"
+                  }
+                ],
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineSourceCodePipelineActionRole7E407CA1",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 1
+              }
+            ],
+            "Name": "Source"
+          },
+          {
+            "Actions": [
+              {
+                "ActionTypeId": {
+                  "Category": "Deploy",
+                  "Owner": "AWS",
+                  "Provider": "CodeDeploy",
+                  "Version": "1"
+                },
+                "Configuration": {
+                  "ApplicationName": "MyDemoApplication",
+                  "DeploymentGroupName": "MyDemoDeploymentGroup"
+                },
+                "InputArtifacts": [
+                  {
+                    "Name": "Artifact_Source_Source"
+                  }
+                ],
+                "Name": "Deploy",
+                "RoleArn": {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineDeployCodePipelineActionRoleA5F88CC6",
+                    "Arn"
+                  ]
+                },
+                "RunOrder": 1
+              }
+            ],
+            "Name": "Deploy"
+          }
+        ],
+        "ArtifactStore": {
+          "EncryptionKey": {
+            "Id": {
+              "Fn::GetAtt": [
+                "codedeploypipelineArtifactsBucketEncryptionKey94FB115B",
+                "Arn"
+              ]
+            },
+            "Type": "KMS"
+          },
+          "Location": {
+            "Ref": "codedeploypipelineArtifactsBucket1C1D71D8"
+          },
+          "Type": "S3"
+        },
+        "Name": "code-deploy-pipeline",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "DependsOn": [
+        "codedeploypipelineRoleDefaultPolicyAE05F61E",
+        "codedeploypipelineRoleA50B8070"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/Resource"
+      }
+    },
+    "codedeploypipelineSourceCodePipelineActionRole7E407CA1": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/Source/Source/CodePipelineActionRole/Resource"
+      }
+    },
+    "codedeploypipelineSourceCodePipelineActionRoleDefaultPolicy5C8887AC": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject*",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineArtifactsBucket1C1D71D8",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "codedeploypipelineArtifactsBucket1C1D71D8",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "codedeploypipelineArtifactsBucketEncryptionKey94FB115B",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "codecommit:GetBranch",
+                "codecommit:GetCommit",
+                "codecommit:UploadArchive",
+                "codecommit:GetUploadArchiveStatus",
+                "codecommit:CancelUploadArchive"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codecommit:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":code-deploy-pipelineMyDemoRepo"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "codedeploypipelineSourceCodePipelineActionRoleDefaultPolicy5C8887AC",
+        "Roles": [
+          {
+            "Ref": "codedeploypipelineSourceCodePipelineActionRole7E407CA1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/Source/Source/CodePipelineActionRole/DefaultPolicy/Resource"
+      }
+    },
+    "codedeploypipelineDeployCodePipelineActionRoleA5F88CC6": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":root"
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/Deploy/Deploy/CodePipelineActionRole/Resource"
+      }
+    },
+    "codedeploypipelineDeployCodePipelineActionRoleDefaultPolicy449AC120": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "codedeploy:GetApplicationRevision",
+                "codedeploy:RegisterApplicationRevision"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codedeploy:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":application:MyDemoApplication"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "codedeploy:CreateDeployment",
+                "codedeploy:GetDeployment"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codedeploy:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":deploymentgroup:MyDemoApplication/MyDemoDeploymentGroup"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": "codedeploy:GetDeploymentConfig",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codedeploy:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":deploymentconfig:CodeDeployDefault.OneAtATime"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "codedeploypipelineArtifactsBucket1C1D71D8",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "codedeploypipelineArtifactsBucket1C1D71D8",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "codedeploypipelineArtifactsBucketEncryptionKey94FB115B",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "codedeploypipelineDeployCodePipelineActionRoleDefaultPolicy449AC120",
+        "Roles": [
+          {
+            "Ref": "codedeploypipelineDeployCodePipelineActionRoleA5F88CC6"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/Deploy/Deploy/CodePipelineActionRole/DefaultPolicy/Resource"
+      }
+    },
+    "codedeploypipelineEventsRole0746F293": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "code-deploy-pipeline-ec2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/EventsRole/Resource"
+      }
+    },
+    "codedeploypipelineEventsRoleDefaultPolicy3E3F5CD6": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "codepipeline:StartPipelineExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":codepipeline:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":",
+                    {
+                      "Ref": "codedeploypipelineD731FBB7"
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "codedeploypipelineEventsRoleDefaultPolicy3E3F5CD6",
+        "Roles": [
+          {
+            "Ref": "codedeploypipelineEventsRole0746F293"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code-deploy-pipeline/EventsRole/DefaultPolicy/Resource"
+      }
+    },
+    "coderepodiltry1apppipelinedeployec2codedeploypipeline837AF954EventRule83927312": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "EventPattern": {
+          "source": [
+            "aws.codecommit"
+          ],
+          "resources": [
+            {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:",
+                  {
+                    "Ref": "AWS::Partition"
+                  },
+                  ":codecommit:",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ":",
+                  {
+                    "Ref": "AWS::AccountId"
+                  },
+                  ":code-deploy-pipelineMyDemoRepo"
+                ]
+              ]
+            }
+          ],
+          "detail-type": [
+            "CodeCommit Repository State Change"
+          ],
+          "detail": {
+            "event": [
+              "referenceCreated",
+              "referenceUpdated"
+            ],
+            "referenceName": [
+              "master"
+            ]
+          }
+        },
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:",
+                  {
+                    "Ref": "AWS::Partition"
+                  },
+                  ":codepipeline:",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ":",
+                  {
+                    "Ref": "AWS::AccountId"
+                  },
+                  ":",
+                  {
+                    "Ref": "codedeploypipelineD731FBB7"
+                  }
+                ]
+              ]
+            },
+            "Id": "Target0",
+            "RoleArn": {
+              "Fn::GetAtt": [
+                "codedeploypipelineEventsRole0746F293",
+                "Arn"
+              ]
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/code_repo/diltry1apppipelinedeployec2codedeploypipeline837AF954EventRule/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAA11RTW/CMAz9LdxDGEPTxG0dkxDaYVWZuIfUiKxtHOUDVFX578tHC2wnPz/bz37Jkq7X9Gn2xq5mzutmMXDUQIe9ZbwhFRh0mgPZnGTJNOvAgiYblMZqx22kv5xVLqHH5tBSCytQehKFB+DPdDgoHmuHckNKd2wF37ujhDR7RxU6C9/s2MKdv3OFMcgFi8q35gh2MhwWOrfMwpX145oxK2wwc+5AWrIH7rSw/VajU2nBH2IXjDHJR8mMPeFYA8euE5YOFSg0wqLus+Up80SwLpQx3z3FSaTUeBKBKjHYTqMZZfEaVIt9eHTQF9CFUqF08/iY5oaP1B793Gz8o7KsEgpaIcNvliNKi0fsSdMZOnxCOieGohXMpJUReGJWdHh3vMkfk5EncAlbwmDlRqsheu9J2dszysWKvtLly+zHCDHXTlrRAa1y/AWn9HYRawIAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "diltry1-app-pipelinedeploy-ec2/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Parameters": {
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+    }
+  },
+  "Outputs": {
+    "applicationrepository": {
+      "Value": {
+        "Fn::GetAtt": [
+          "CodeCommitRepository596379BC",
+          "CloneUrlHttp"
+        ]
+      }
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "af-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
